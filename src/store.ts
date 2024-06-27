@@ -16,6 +16,8 @@ export interface Pokemon {
 }
 const rawPokeMon$ = new BehaviorSubject<Pokemon[]>([]);
 
+export const selected$ = new BehaviorSubject<number[]>([]);
+
 //Map came from rxjs
 export const pokenMonWithPower$ = rawPokeMon$.pipe(
   map((pokenMon) =>
